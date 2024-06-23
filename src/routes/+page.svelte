@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import type { PageData } from './$types.js';
+	import '../app.css';
+
+	export let data: PageData;
+	console.log(data); // get data from api == +page
+</script>
+
+<div class="flex gap-1 flex-col">
+	{#each data.monsters as montser (monster.url)}
+		<div class=" border-t-2">
+			<p>{montser.id} {montser.name}</p>
+		</div>
+	{/each}
+</div>
