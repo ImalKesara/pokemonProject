@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { indexMonster } from './+page.ts';
+	import type { indexMonster } from './+page.ts';
 	import type { PageData } from './$types.js';
 	import '../app.css';
 	import { generations } from './generation.js';
